@@ -71,6 +71,34 @@ resume-builder/
 
 ---
 
+## 🔁 Process Flowchart
+
+The diagram below visualizes the full journey from user input to final document generation:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[Collect Name, Email,<br/>Education & Skills]
+    B --> C[Collect Raw<br/>Experience Text]
+    C --> D[Print Gemini Link<br/>+ Ready-Made Prompt]
+    D --> E[User Pastes Prompt<br/>into Gemini]
+    E --> F[User Copies Gemini's<br/>Refined Experience Back]
+    F --> G[Build Resume Object<br/>Resume.java]
+    G --> H[Run ATS Keyword Scan<br/>ATS.java]
+    H --> I{Skills Match<br/>Keyword Bank?}
+    I -->|Yes| J[+20 Points per<br/>Matched Keyword]
+    I -->|No| K[Skip Keyword]
+    J --> L[Compute Final<br/>ATS Score]
+    K --> L
+    L --> M[Generate .docx<br/>ResumeDocGenerator.java]
+    M --> N[Format Title, Contact,<br/>Education, Skills & Experience]
+    N --> O[Save Resume.docx]
+    O --> P([End])
+```
+
+> GitHub natively renders Mermaid diagrams, so this flowchart will display automatically on your repository's README page.
+
+---
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
@@ -170,11 +198,15 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Soumen Das**
-B.Tech ECE Student, IEM Kolkata (MAKAUT) | Aspiring SDE
+**Soumen Laha**
+B.Tech in Electronics and Communication Engineering, IEM Kolkata (MAKAUT) | Aspiring SDE
 
-- LeetCode: [HuH3msfXNp](https://leetcode.com/HuH3msfXNp)
-- GitHub: [Soumen827](https://github.com/Soumen827)
+[![GitHub](https://img.shields.io/badge/GitHub-Soumen827-181717?style=flat&logo=github)](https://github.com/Soumen827)
+[![LeetCode](https://img.shields.io/badge/LeetCode-HuH3msfXNp-FFA116?style=flat&logo=leetcode&logoColor=white)](https://leetcode.com/HuH3msfXNp)
+
+---
+
+<p align="center">⭐ If you found this project useful, consider giving it a star!</p>
 
 ---
 
